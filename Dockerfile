@@ -4,7 +4,7 @@ RUN groupadd flaskgroup && useradd -m -g flaskgroup -s /bin/bash flask
 
 RUN mkdir -p /home/flask/app/
 WORKDIR /home/flask/app/
-RUN git clone https://github.com/FizzyDuncDizzel/flask-aws-storage
+RUN git clone http://github.com/FizzyDuncDizzel/flask-aws-storage
 RUN mv flask-aws-storage web && mkdir -p /home/flask/app/web/uploads
 WORKDIR /home/flask/app/web
 RUN pip install --no-cache-dir -r requirements.txt
